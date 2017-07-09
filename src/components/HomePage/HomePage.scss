@@ -1,0 +1,365 @@
+@import '../../styles/variables';
+@import '../../styles/utilities';
+
+.home-page {
+  > header {
+    width: 100%;
+    color: $white;
+    background-color: $black;
+    padding: 10px 15px;
+    @include media-break(medium) {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 10px 45px;
+    }
+    h1 {
+      text-align: left;
+      font-weight: 700;
+      font-size: em(20px);
+      padding: 0;
+      margin: 0;
+      line-height: 1.2em;
+      @include media-break(medium) {
+        display: inline-block;
+        font-size: em(48px);
+        width: 200px;
+      }
+    }
+    address {
+      display: block;
+      text-align: left;
+      margin: 10px 0;
+      p {
+        font-size: em(15px);
+      }
+      p:first-child {
+        font-size: em(20px);
+        margin: 0;
+      }
+      p:last-child {
+        font-weight: 700;
+        @include media-break(medium) {
+          font-size: em(25px);
+        }
+      }
+      @include media-break(medium) {
+        margin: 0;
+        display: inline-block;
+        text-align: right;
+        width: 478px;
+      }
+    }
+  }
+  .wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    @include media-break(medium) {
+      margin-top: 40px;
+      width: 768px;
+      border-bottom: 1px solid rgba($box-shadow, .2);
+      box-shadow: 0 1px 1px 0 rgba($black, .2), 0 0 15px 0 $box-shadow;
+    }
+  }
+  .about, .experience {
+    width: 100%;
+    color: $white;
+    padding: 30px 15px 40px;
+    p {
+      color: rgba($white, .90);
+    }
+    @include media-break(medium) {
+      width: 50%;
+      display: inline-block;
+      height: 280px;
+      vertical-align: top;
+      padding: 30px 40px 40px;
+    }
+    h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: em(20px);
+      margin-top: 0;
+    }
+    p {
+      font-size: em(17px);
+      line-height: em(22px);
+    }
+  }
+  .about {
+    background-color: $tia-maria;
+    h2:after {
+      content: " ";
+      border: 1px solid rgba($white, .8);
+      margin: 15px 0;
+      display: block;
+      max-width: 60px;
+    }
+  }
+  .experience {
+    text-shadow: 2px 2px 4px $text-shadow;
+    background-color: rgba($black, .4);
+    h2:after {
+      content: " ";
+      border: 1px solid rgba($white, .8);
+      margin: 15px 0;
+      display: block;
+      max-width: 90px;
+    }
+    span {
+      display: block;
+    }
+    i, p {
+      display: inline-block;
+    }
+    i {
+      width: 20px;
+      line-height: em(30px);
+      vertical-align: top;
+    }
+    p {
+      width: 80%;
+      margin-left: 10px;
+      @include media-break(medium) {
+        width: 260px;
+      }
+    }
+  }
+  .skills {
+    width: 100%;
+    color: $white;
+    background-color: rgba($black, .7);
+    @include media-break(medium) {
+      width: 768px;
+      margin: 40px auto 0;
+      border-bottom: 1px solid rgba($box-shadow, .2);
+      box-shadow: 0 1px 1px 0 rgba($black, .2), 0 0 15px 0 $box-shadow;
+    }
+    .container {
+      width: 100%;
+      text-align: center;
+    }
+    header {
+      i {
+        margin: 0 10px 0 30px;
+        display: none;
+        @include media-break(medium) {
+          display: inline-block;
+        }
+      }
+      h2 {
+        color: rgba($white, .6);
+        text-align: center;
+        //font-weight: 700;
+        font-size: em(18px);
+        line-height: em(20px);
+        margin: 0;
+        //width: 180px;
+        border-bottom: 4px solid $tia-maria;
+        padding: 10px;
+        @include media-break(medium) {
+          text-align: left;
+        }
+      }
+
+      > h2 {
+        color: $white;
+        background-color: $tia-maria;
+      }
+      a, a:hover, a:focus, a:active {
+        text-decoration: none;
+      }
+      a > h2:first-child {
+        border-right: 1px solid rgba($white, .2);
+      }
+      a > h2:hover {
+        color: $white;
+        background: -webkit-linear-gradient(right,$tia-maria 75%, darken($tia-maria, 10));
+        background: linear-gradient(-90deg,$tia-maria 75%, darken($tia-maria, 10));
+      }
+    }
+    section {
+      padding: 20px 0 10px;
+      p {
+        color: rgba($white, .9);
+        font-size: em(20px);
+        padding: 20px 10px 10px;
+      }
+    }
+  }
+  .blog {
+    width: 100%;
+    color: $white;
+    background-color: $dark-grey;
+    padding: 30px 15px 10px;
+    @include media-break(medium) {
+      width: 768px;
+      margin: 40px auto 0;
+      border-bottom: 1px solid rgba($box-shadow, .2);
+      box-shadow: 0 1px 1px 0 rgba($black, .2), 0 0 15px 0 $box-shadow;
+      padding: 30px 40px 10px;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    a:hover {
+      h2 {
+        color: darken($tia-maria, 10);
+        text-decoration: underline;
+      }
+    }
+    h2 {
+      color: $tia-maria;
+      text-shadow: 2px 2px 4px $text-shadow;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: em(25px);
+      margin-top: 0;
+    }
+    article {
+      padding: 10px 15px 0;
+      h4 {
+        color: rgba($white, .4);
+        font-size: em(15px);
+      }
+      h3 {
+        margin: 0;
+        color: rgba($white, .8);
+        line-height: em(20px);
+        @include media-break(medium) {
+          padding-right: 20px;
+        }
+      }
+      > div {
+        @include media-break(medium) {
+          display: inline-block;
+        }
+      }
+      > div:first-of-type {
+        width: 100%;
+        @include media-break(medium) {
+          width: 80%;
+        }
+      }
+      .tags {
+        text-align: right;
+        margin-top: 20px;
+        @include media-break(medium) {
+          text-align: left;
+          display: inline-block;
+          width: 20%;
+          vertical-align: top;
+          margin-top: 0;
+          margin-left: auto;
+        }
+        div {
+          margin: 0 5px;
+          width: calc(25% - 10px);
+          line-height: em(30px);
+          display: inline-block;
+          text-align: center;
+          @include media-break(medium) {
+            margin: 0;
+            width: 50%;
+            line-height: em(50px);
+          }
+          &.js {
+            color: #222;
+            background-color: #f7df1e;
+          }
+          &.mongo {
+            color: #76b662;
+            background-color: #423121;
+          }
+          &.nodejs {
+            color: #88c043;
+            background-color: #f7f7f7;
+          }
+          &.react {
+            color: #00d8ff;
+            background-color: #222222;
+          }
+          &.redux {
+            color: #fff;
+            background-color: #7649bb;
+          }
+          &.css {
+            color: #e8ebed;
+            background-color: #0171ba;
+          }
+          &.fp {
+            color: #eee;
+            background-color: #222222;
+          }
+          &.cs101 {
+            color: #444;
+            background-color: #aaaaaa;
+          }
+          &.cli {
+            color: greenyellow;
+            background-color: black;
+            font-family: monospace;
+            text-transform: uppercase;
+          }
+          &.meanjs {
+            color: #de1b16;
+            background-color: #92c54c;
+          }
+        }
+      }
+      &:after {
+        content: " ";
+        border: 1px solid rgba($white, .1);
+        margin: 15px 0;
+        display: block;
+        max-width: 200px;
+      }
+    }
+  }
+  .contact-message {
+    width: 100%;
+    color: $white;
+    background-color: rgba($dark-grey, 0.6);
+    //padding: 30px 15px 10px;
+    @include media-break(medium) {
+      width: 768px;
+      margin: 40px auto 0;
+      border-bottom: 1px solid rgba($box-shadow, .2);
+      box-shadow: 0 1px 1px 0 rgba($black, .2), 0 0 15px 0 $box-shadow;
+      //padding: 30px 40px 10px;
+    }
+    a > i {
+      color: $tia-maria;
+      width: 50%;
+      padding: 30px 30px 15px;
+      @include media-break(small) {
+        vertical-align: top;
+        width: 20%;
+      }
+      @include media-break(medium) {
+        width: 15%;
+      }
+    }
+    a:first-child > i {
+      text-align: right;
+    }
+    p {
+      padding: 0 20px 20px;
+      margin: 0;
+      font-size: em(16px);
+      line-height: em(22px);
+      @include media-break(small) {
+        padding: 30px;
+        display: inline-block;
+        width: 60%;
+      }
+      @include media-break(medium) {
+        width: 70%;
+      }
+    }
+    a {
+      color: $scooter;
+    }
+  }
+}
