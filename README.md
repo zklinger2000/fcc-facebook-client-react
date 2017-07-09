@@ -1,6 +1,6 @@
 # zklinger-web-client
 > built on [https://github.com/coryhouse/react-slingshot](https://github.com/coryhouse/react-slingshot)  
-> This version works with fcc-google-api and deploys to Heroku.
+> This version works with fcc-heroku-rest-api and deploys to Heroku.
 
 ## React-Redux Web Client with Sass, DevTools and Mocha Testing, served by Webpack
 
