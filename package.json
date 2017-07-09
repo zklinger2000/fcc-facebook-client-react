@@ -59,9 +59,7 @@
     "react-static-container": "1.0.1",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0",
-    "toastr": "2.1.2"
-  },
-  "devDependencies": {
+    "toastr": "2.1.2",
     "autoprefixer": "6.4.0",
     "bootstrap-sass": "3.3.7",
     "browser-sync": "2.14.0",
