@@ -1,7 +1,7 @@
 import React, {
   PropTypes,
 } from 'react';
-import { IndexLink, Link } from 'react-router';
+import { IndexLink } from 'react-router';
 import './Header.scss';
 
 const Header = (props) => {
@@ -12,7 +12,7 @@ const Header = (props) => {
           <IndexLink to="/">Home</IndexLink>
         </li>
         <li>
-          <a href="http://localhost:8050/login/facebook" target="_self"><i className="fa fa-facebook fa-2x"/>Login</a>
+          <a href={`${process.env.NODE_ENV === 'production' ? 'https://fcc-heroku-rest-api.herokuapp.com' : 'http://localhost:8050'}/login/facebook`} target="_self"><i className="fa fa-facebook fa-2x"/>Login</a>
         </li>
       </ul>
     </nav>
