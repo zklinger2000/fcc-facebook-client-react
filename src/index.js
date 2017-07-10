@@ -40,6 +40,13 @@ if (userToken) {
       } else {
         store.dispatch(actions.authFacebookError('No user found'));
       }
+    })
+    .catch(err => {
+      // If request is bad...
+      // Show an error to the user
+      // console.log(err);
+      store.dispatch(actions.authFacebookError(err));
+      store.dispatch(actions.logoutUser());
     });
 }
 
