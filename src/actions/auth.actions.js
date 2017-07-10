@@ -26,7 +26,7 @@ export function authTokenLogin(userToken) {
     payload: {
       token: userToken
     }
-  }
+  };
 }
 
 export function logoutUser() {
@@ -63,7 +63,6 @@ export function tokenLogin() {
     })
       .then(response => {
         if (response.data && response.data.token) {
-          console.log(response.data);
           dispatch(authFacebookReceiveProfile(response.data));
           // TODO: Add logic to save the current path when 'login' was clicked
           browserHistory.push('/');
