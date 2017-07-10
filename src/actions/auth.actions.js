@@ -50,7 +50,6 @@ export function authFacebookRequestProfile() {
   };
 }
 
-// AJAX call for a secure resource
 export function tokenLogin() {
   const userToken = localStorage.getItem('user_token');
   // TODO: Add token timeout check
@@ -73,7 +72,32 @@ export function tokenLogin() {
       .catch(err => {
         // If request is bad...
         // Show an error to the user
+        // console.log(err);
         dispatch(authFacebookError(err));
+        dispatch(logoutUser());
+      });
+  };
+}
+
+// AJAX call for a secure resource
+export function getPrivateResource() {
+  const userToken = localStorage.getItem('user_token');
+
+  return dispatch => {
+    axios.get(`${API_URL}/private`, {
+      headers: { authorization: userToken }
+    })
+      .then(response => {
+        if (response.data) {
+          console.info(response.data);  // eslint-disable-line no-console
+        } else {
+          dispatch(authFacebookError('empty response!'));
+        }
+      })
+      .catch(err => {
+        // If request is bad...
+        dispatch(authFacebookError(err));
+        dispatch(logoutUser());
       });
   };
 }
