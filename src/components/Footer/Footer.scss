@@ -5,18 +5,14 @@ footer.footer {
   width: 100%;
   text-align: center;
   color: $white;
-  //background-color: $tia-maria;
   background-color: rgba($black, .8);
-  padding: 20px;
+  padding: 20px 20px 30px;
+  height: 200px;
+  margin: -200px auto 0;
   @include media-break(medium) {
-    width: 768px;
     height: 130px;
     margin: -130px auto 0;
     padding: 30px 15px 10px;
-    //border-bottom: 1px solid rgba($box-shadow, .2);
-    //box-shadow: 0 1px 1px 0 rgba($black, .2), 0 0 15px 0 $box-shadow;
-    //padding: 30px 40px 10px;
-    //border: 1px solid darken($tia-maria, 10);
   }
   a {
     color: $white;
@@ -24,16 +20,15 @@ footer.footer {
     text-transform: uppercase;
     padding: 5px;
     @media only screen and (min-width: 768px) {
-      //margin-bottom: 20px;
       display: inline-block;
       padding: 0 20px;
-      &:nth-child(-n+3) {
+      &:not(:last-child) {
         border-right: 2px solid $outer-space;
       }
     }
   }
   h5 {
     padding: 20px 0 10px;
-    //margin: 0;
+    margin: 0;
   }
 }

@@ -10,14 +10,15 @@ import Footer from '../Footer/Footer';
 class App extends Component {
   render() {
     const path = pathHelper.getBasePath(this.props.location.pathname);
+    const { authenticated } = this.props;
 
     return (
       <div className="app">
-        <Header pathname={path}/>
+        <Header pathname={path} authenticated={authenticated}/>
         <div className="content-wrapper">
           {this.props.children}
         </div>
-        <Footer pathname={path}/>
+        <Footer pathname={path} authenticated={authenticated}/>
       </div>
     );
   }
@@ -25,14 +26,16 @@ class App extends Component {
 
 App.propTypes = {
   children: PropTypes.element,
-  isLoggingIn: PropTypes.bool.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
+  authenticated: PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
   return {
-    isLoggingIn: state.auth.isLoggingIn,
-    location: ownProps.location
+    location: ownProps.location,
+    user: state.auth.user,
+    authenticated: state.auth.authenticated
   };
 }
 

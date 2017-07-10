@@ -6,24 +6,24 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/auth.actions';
 
-class LoginReturn extends Component {
+class Logout extends Component {
   componentDidMount() {
-    localStorage.setItem('user_token', this.props.location.query.token);
-    this.props.actions.tokenLogin();
+    this.props.actions.logoutUser();
   }
 
   render() {
     return (
-      <h1>Login Return</h1>
+      <section className="container">
+        <h1 className="jumbotron">You are now logged out.</h1>
+      </section>
     );
   }
 }
 
-LoginReturn.propTypes = {
-  location: PropTypes.object,
+Logout.propTypes = {
   actions: PropTypes.object.isRequired
 };
-LoginReturn.defaultProps = {};
+Logout.defaultProps = {};
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -31,4 +31,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(LoginReturn);
+export default connect(null, mapDispatchToProps)(Logout);
