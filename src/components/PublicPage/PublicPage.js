@@ -1,4 +1,5 @@
 import React from 'react';
+import './PublicPage.scss';
 
 const PublicPage = () => {
   return (
@@ -6,7 +7,8 @@ const PublicPage = () => {
       <div className="container">
         <h1>Public Page</h1>
         <p className="jumbotron">This page is visible to anyone.<br/>
-          Notice how the footer links change...
+          Notice how the Footer links change.<br/>
+          Login with Facebook to see more...
         </p>
       </div>
     </section>

@@ -2,7 +2,7 @@
 @import '../../styles/utilities';
 
 .home-page {
-  height: 100%;
+  @extend %page-setup;
   > header {
     width: 100%;
     color: $white;
@@ -24,6 +24,5 @@
   }
   > section {
     padding: 25px 15px;
-    margin-bottom: 200px;
   }
 }
