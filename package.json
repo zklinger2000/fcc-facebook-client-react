@@ -111,5 +111,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3"
   }
 }
