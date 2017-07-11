@@ -38,3 +38,10 @@ body {
 h2, h3 {
   font-family: $font-family--secondary;
 }
+
+a {
+  color: $scooter;
+}
+a:hover, a:focus {
+  color: $steel-blue;
+}

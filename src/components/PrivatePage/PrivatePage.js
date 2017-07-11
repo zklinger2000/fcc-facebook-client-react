@@ -26,6 +26,11 @@ class PrivatePage extends Component {
             If you open up your browser's console, you should see:<br/>
             <code>{`{message: "Secret Code is 789"}`}</code>
           </p>
+          <p className="jumbotron">
+            If you type <code>localStorage.valueOf()</code> into the console, you will
+            see your <code>user_token</code> that makes persistent login possible.<br/>
+            You can see how this works by looking at the REST API's <a href="https://github.com/zklinger2000/fcc-heroku-rest-api" target="_blank">project page</a>.
+          </p>
         </div>
       </section>
     );
