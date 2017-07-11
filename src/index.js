@@ -27,7 +27,6 @@ const API_URL = process.env.NODE_ENV === 'production'
   : 'http://localhost:8050';
 
 const userToken = localStorage.getItem('user_token');
-// TODO: Add token timeout check
 if (userToken) {
   store.dispatch(actions.authTokenLogin(userToken));
   store.dispatch(actions.authFacebookRequestProfile());
@@ -43,8 +42,6 @@ if (userToken) {
     })
     .catch(err => {
       // If request is bad...
-      // Show an error to the user
-      // console.log(err);
       store.dispatch(actions.authFacebookError(err));
       store.dispatch(actions.logoutUser());
     });

@@ -52,7 +52,6 @@ export function authFacebookRequestProfile() {
 
 export function tokenLogin() {
   const userToken = localStorage.getItem('user_token');
-  // TODO: Add token timeout check
 
   return dispatch => {
     dispatch(authTokenLogin(userToken));
@@ -72,7 +71,6 @@ export function tokenLogin() {
       .catch(err => {
         // If request is bad...
         // Show an error to the user
-        // console.log(err);
         dispatch(authFacebookError(err));
         dispatch(logoutUser());
       });
