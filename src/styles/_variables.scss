@@ -65,12 +65,6 @@ $font-family-sans-serif     : "Helvetica Neue", Helvetica, sans-serif;
 $font-family--primary       : $font-family-droid-sans;
 $font-family--secondary     : $font-family-oswald;
 
-/* Bauhaus 93 */
-@font-face {
-  font-family: "Bauhaus 93";
-  src: url('https://s3-us-west-1.amazonaws.com/moho/fonts/bauhaus93.ttf') format('truetype');
-}
-
 /* Text Sizes */
 $base--font-size  : 14px;
 $base--line       : 20px;

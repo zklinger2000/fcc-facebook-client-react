@@ -21,6 +21,15 @@ body {
   font-size: em(22px);
   line-height: em(28px, $base--line);
 }
+h2, h3 {
+  font-family: $font-family--secondary;
+}
+a {
+  color: $scooter;
+}
+a:hover, a:focus {
+  color: $steel-blue;
+}
 /* App Content Wrapper */
 #app, .app {
   position: relative;
@@ -30,18 +39,7 @@ body {
   margin: 0;
   padding-top: 65px;
   min-height: 100%;
-  //margin-bottom: -50px;
   @include media-break(medium) {
     padding-bottom: 130px;
   }
-}
-h2, h3 {
-  font-family: $font-family--secondary;
-}
-
-a {
-  color: $scooter;
-}
-a:hover, a:focus {
-  color: $steel-blue;
 }
