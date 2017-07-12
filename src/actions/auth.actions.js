@@ -8,6 +8,7 @@ import {
   AUTH_FACEBOOK_RECEIVE_PROFILE,
   AUTH_FACEBOOK_REQUEST_PROFILE
 } from '../constants/actionTypes';
+import toastr from 'toastr';
 
 const API_URL = process.env.NODE_ENV === 'production'
   ? 'https://fcc-heroku-rest-api.herokuapp.com'
@@ -96,6 +97,8 @@ export function getPrivateResource() {
         // If request is bad...
         dispatch(authFacebookError(err));
         dispatch(logoutUser());
+        // Show a message saying what the error was
+        toastr.error(err.response.data, 'Error', { positionClass: 'toast-bottom-full-width' });
       });
   };
 }
